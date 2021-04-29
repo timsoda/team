@@ -97,7 +97,7 @@ function memberRegs(){
 	
 	$.ajax({
 		type: "POST",
-		url: "https://samuelproject.000webhostapp.com/serve", 
+		url: "https://samuelproject.000webhostapp.com/serve/", 
 		dataType: "json",
 		data: {fullnamesignup: fullnamesignup, emailsignup: emailsignup, passwordsignup: passwordsignup, passwordsignup_confirm: passwordsignup_confirm, },
 		success: function(data){
@@ -165,7 +165,7 @@ function memberGer() {
 
 	$.ajax({
 		type: "POST",
-		url: "https://samuelproject.000webhostapp.com/serve", 
+		url: "https://samuelproject.000webhostapp.com/serve/", 
 		dataType: "json",
 		data: {username: username, password: password},
 		success: function(data){
