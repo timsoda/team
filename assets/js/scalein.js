@@ -174,7 +174,7 @@ function memberGer() {
             document.getElementById("hsmsg").innerHTML = "";
 		document.cookie = "filemxee_boom = "+simput.coni+"; expires=Thu, 18 Dec 2021 12:00:00 UTC; path=/";
             	document.cookie = "dexlemxx_moon = "+simput.ctwi+"; expires=Thu, 18 Dec 2021 12:00:00 UTC; path=/";
-			window.location.href = "./";
+			//window.location.href = "./";
         }else{
 			document.getElementById("signinSub").style.display = "block";
             document.getElementById("signinspin").style.display = "none";;
