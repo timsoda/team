@@ -5,6 +5,8 @@ var MsubmPackGlC = 0;
 var dashjikem = document.getElementById("dashmenu");
 var postjikem = document.getElementById("postmenu");
 var completedjikem = document.getElementById("completedmenu");
+var filemxee_boom = getCookie("filemxee_boom");
+var dexlemxx_moon = getCookie("dexlemxx_moon");
 postallList();
 MeltolaBio();
 $('.summernote').summernote({
@@ -86,7 +88,7 @@ function MeltolaBio() {
 		type: "POST",
 		url: "https://samuelproject.000webhostapp.com/serve/", 
 		dataType: "json",
-		data: {gnduvgag: gnduvgag },
+		data: {gnduvgag: gnduvgag, filemxee_boom: filemxee_boom, dexlemxx_moon: dexlemxx_moon},
 		success: function(RespondsMem){
             var SmekFro = RespondsMem;
            var ttrack =  SmekFro.map(hymc => hymc.ttrack)
@@ -184,7 +186,7 @@ function CommencePost(){
             type: "POST",
             url: "https://samuelproject.000webhostapp.com/serve/", 
             dataType: "json",
-            data: {title: title, post: post, taskask: taskask, ndescribe: ndescribe, lfatme: lfatme, passup: passup},
+            data: {title: title, post: post, taskask: taskask, ndescribe: ndescribe, lfatme: lfatme, passup: passup, filemxee_boom: filemxee_boom, dexlemxx_moon: dexlemxx_moon},
             success: function(data){
                 
             var ics = data;
@@ -223,7 +225,7 @@ function CommencePost(){
             type: "POST",
             url: "https://samuelproject.000webhostapp.com/serve/", 
             dataType: "json",
-            data: {title: title, post: post, taskask: taskask, ndescribe: ndescribe, lfatme: lfatme},
+            data: {title: title, post: post, taskask: taskask, ndescribe: ndescribe, lfatme: lfatme, filemxee_boom: filemxee_boom, dexlemxx_moon: dexlemxx_moon},
             success: function(data){
                 
             var ics = data;
@@ -295,7 +297,7 @@ function postallList(){
 		type: "POST",
 		url: "https://samuelproject.000webhostapp.com/serve/", 
 		dataType: "json",
-		data: {vjsoienas: vjsoienas},
+		data: {vjsoienas: vjsoienas, filemxee_boom: filemxee_boom, dexlemxx_moon: dexlemxx_moon},
 		success: function(ListResponds){
             postclovkGl = ListResponds;
             postclovkGlC = 1;
@@ -459,7 +461,7 @@ function Peopleweysubmit() {
 		type: "POST",
 		url: "https://samuelproject.000webhostapp.com/serve/", 
 		dataType: "json",
-		data: {wsudqlisx: wsudqlisx },
+		data: {wsudqlisx: wsudqlisx, filemxee_boom: filemxee_boom, dexlemxx_moon: dexlemxx_moon},
 		success: function(RespondsThem){
             MsubmPack = RespondsThem;
             MsubmPackGlC = 1;
@@ -693,7 +695,7 @@ function assgaccmplRemark() {
             type: "POST",
             url: "https://samuelproject.000webhostapp.com/serve/", 
             dataType: "json",
-            data: {sbremark: sbremark, sbscore: sbscore, sbloodc: sbloodc, sbloomd: sbloomd},
+            data: {sbremark: sbremark, sbscore: sbscore, sbloodc: sbloodc, sbloomd: sbloomd, filemxee_boom: filemxee_boom, dexlemxx_moon: dexlemxx_moon},
             success: function(TasJardata){
                 //$("#rufusLohn").html(data);
                 
@@ -736,7 +738,7 @@ function LogOutCool(){
     $.ajax({
 		type: "POST",
 		url: "https://samuelproject.000webhostapp.com/serve/", 
-		data: {xriodqryycc: xriodqryycc, },
+		data: {xriodqryycc: xriodqryycc, filemxee_boom: filemxee_boom, dexlemxx_moon: dexlemxx_moon},
 		success: function(LogOutVotersData){
 			//$("#SignHer").html(LogOutVotersData);  
 			document.cookie = "filemxee_boom= 0 ; expires=Thu, 18 Dec 1999 12:00:00 UTC; path=/";
@@ -745,6 +747,25 @@ function LogOutCool(){
 		}
 		 
 	});
+}
+function getCookie(name) {
+    // Split cookie string and get all individual name=value pairs in an array
+    var cookieArr = document.cookie.split(";");
+
+    // Loop through the array elements
+    for(var i = 0; i < cookieArr.length; i++) {
+        var cookiePair = cookieArr[i].split("=");
+
+        /* Removing whitespace at the beginning of the cookie name
+        and compare it with the given string */
+        if(name == cookiePair[0].trim()) {
+            // Decode the cookie value and return
+            return decodeURIComponent(cookiePair[1]);
+        }
+    }
+
+    // Return null if not found
+    return null;
 }
 function myTrim(x) {
     return x.replace(/^\s+|\s+$/gm,'');
