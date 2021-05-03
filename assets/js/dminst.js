@@ -93,15 +93,15 @@ function MeltolaBio() {
             var SmekFro = RespondsMem;
            var ttrack =  SmekFro.map(hymc => hymc.ttrack)
           
-           document.getElementById("wrapman").style.display = "block"; //temporary till I register admin type, then comment it out
+           //document.getElementById("wrapman").style.display = "block"; //temporary till I register admin type, then comment it out
 
             //console.log(ttrack);
-            /* if(ttrack == "unor"){
+             if(ttrack == "unor"){
                 document.getElementById("wrapman").innerHTML= "";
                 window.location.href = "./";
             }else{
                 document.getElementById("wrapman").style.display = "block";
-            } */
+            } 
             
         }
     });
