@@ -7,7 +7,7 @@ function tapeonrolex() {
     $.ajax({
         type: "POST",
         url: "https://samuelproject.000webhostapp.com/serve/",
-        data: {anceipqd: anceipqd, filemxee_boom: filemxee_boom, dexlemxx_moon: dexlemxx_moon, filemxee_boom: filemxee_boom, dexlemxx_moon: dexlemxx_moon},
+        data: {anceipqd: anceipqd, filemxee_boom: filemxee_boom, dexlemxx_moon: dexlemxx_moon},
         success: function(data){
             $("#rowjo").html(data);
             if(fiddle == "1"){
