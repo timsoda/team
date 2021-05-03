@@ -2,6 +2,8 @@ var alltaskpointsG = "";
 var alltaskpointsGc = 0;
 var allaccomppG = "";
 var allaccomppGc = 0;
+var filemxee_boom = getCookie("filemxee_boom");
+var dexlemxx_moon = getCookie("dexlemxx_moon");
 RooPostAll();
 MeltolaBio();
 $('.summernote').summernote({
@@ -50,7 +52,7 @@ function MeltolaBio() {
 		type: "POST",
 		url: "https://samuelproject.000webhostapp.com/serve/", 
 		dataType: "json",
-		data: {gnduvgag: gnduvgag },
+		data: {gnduvgag: gnduvgag, filemxee_boom: filemxee_boom, dexlemxx_moon: dexlemxx_moon },
 		success: function(RespondsMem){
             var SmekFro = RespondsMem;
             document.getElementById("mtrack").innerHTML = SmekFro.map(hymc => hymc.tstat);
@@ -77,7 +79,7 @@ function RooPostAll() {
 		type: "POST",
 		url: "https://samuelproject.000webhostapp.com/serve/", 
 		dataType: "json",
-		data: {vjsoienas: vjsoienas },
+		data: {vjsoienas: vjsoienas, filemxee_boom: filemxee_boom, dexlemxx_moon: dexlemxx_moon},
 		success: function(ResponsPost){
         alltaskpointsG = ResponsPost;
         alltaskpointsGc = 1;
@@ -88,7 +90,7 @@ function RooPostAll() {
             type: "POST",
             url: "https://samuelproject.000webhostapp.com/serve/", 
             dataType: "json",
-            data: {yxaowwp: yxaowwp },
+            data: {yxaowwp: yxaowwp, filemxee_boom: filemxee_boom, dexlemxx_moon: dexlemxx_moon},
             success: function(ResponsAccomp){
             allaccomppG = ResponsAccomp;
             allaccomppGc = 1;
@@ -333,7 +335,7 @@ function memtaskpostQuater() {
 		type: "POST",
 		url: "https://samuelproject.000webhostapp.com/serve/", 
 		dataType: "json",
-		data: {crowtask: crowtask, crowtkkd: crowtkkd},
+		data: {crowtask: crowtask, crowtkkd: crowtkkd, filemxee_boom: filemxee_boom, dexlemxx_moon: dexlemxx_moon},
 		success: function(data){
 			$("#rufusLohn").html(data);
 			
@@ -485,7 +487,7 @@ function LogOutCool(){
     $.ajax({
 		type: "POST",
 		url: "https://samuelproject.000webhostapp.com/serve/", 
-		data: {xriodqryycc: xriodqryycc, },
+		data: {xriodqryycc: xriodqryycc, filemxee_boom: filemxee_boom, dexlemxx_moon: dexlemxx_moon},
 		success: function(LogOutVotersData){
 			//$("#SignHer").html(LogOutVotersData);  
 			document.cookie = "filemxee_boom= 0 ; expires=Thu, 18 Dec 1999 12:00:00 UTC; path=/";
@@ -494,6 +496,25 @@ function LogOutCool(){
 		}
 		 
 	});
+}
+function getCookie(name) {
+    // Split cookie string and get all individual name=value pairs in an array
+    var cookieArr = document.cookie.split(";");
+
+    // Loop through the array elements
+    for(var i = 0; i < cookieArr.length; i++) {
+        var cookiePair = cookieArr[i].split("=");
+
+        /* Removing whitespace at the beginning of the cookie name
+        and compare it with the given string */
+        if(name == cookiePair[0].trim()) {
+            // Decode the cookie value and return
+            return decodeURIComponent(cookiePair[1]);
+        }
+    }
+
+    // Return null if not found
+    return null;
 }
 function myTrim(x) {
     return x.replace(/^\s+|\s+$/gm,'');
