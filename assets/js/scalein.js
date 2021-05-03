@@ -1,12 +1,13 @@
+var filemxee_boom = getCookie("filemxee_boom");
+var dexlemxx_moon = getCookie("dexlemxx_moon");
 tapeonrolex();
-
 function tapeonrolex() {
     var anceipqd = "anceipqd";
     
     $.ajax({
         type: "POST",
         url: "https://samuelproject.000webhostapp.com/serve/",
-        data: {anceipqd: anceipqd},
+        data: {anceipqd: anceipqd, filemxee_boom: filemxee_boom, dexlemxx_moon: dexlemxx_moon, filemxee_boom: filemxee_boom, dexlemxx_moon: dexlemxx_moon},
         success: function(data){
             $("#rowjo").html(data);
             if(fiddle == "1"){
@@ -172,8 +173,10 @@ function memberGer() {
         var simput = data; 
         if(simput.TurnOut == "1"){
             document.getElementById("hsmsg").innerHTML = "";
-		document.cookie = "filemxee_boom = "+simput.coni+"; expires=Thu, 18 Dec 2021 12:00:00 UTC; path=/";
-            	document.cookie = "dexlemxx_moon = "+simput.ctwi+"; expires=Thu, 18 Dec 2021 12:00:00 UTC; path=/";
+            //document.cookie = "filemxee_boom= 0 ; expires=Thu, 18 Dec 1999 12:00:00 UTC; path=/";
+			//document.cookie = "dexlemxx_moon= 0; expires=Thu, 18 Dec 1999 12:00:00 UTC; path=/";
+            document.cookie = "filemxee_boom = "+simput.coni+"; expires=Thu, 18 Dec 2021 12:00:00 UTC; path=/";
+            document.cookie = "dexlemxx_moon = "+simput.ctwi+"; expires=Thu, 18 Dec 2021 12:00:00 UTC; path=/";
 			window.location.href = "./";
         }else{
 			document.getElementById("signinSub").style.display = "block";
@@ -185,7 +188,25 @@ function memberGer() {
 		 
 	});
 }
+function getCookie(name) {
+    // Split cookie string and get all individual name=value pairs in an array
+    var cookieArr = document.cookie.split(";");
 
+    // Loop through the array elements
+    for(var i = 0; i < cookieArr.length; i++) {
+        var cookiePair = cookieArr[i].split("=");
+
+        /* Removing whitespace at the beginning of the cookie name
+        and compare it with the given string */
+        if(name == cookiePair[0].trim()) {
+            // Decode the cookie value and return
+            return decodeURIComponent(cookiePair[1]);
+        }
+    }
+
+    // Return null if not found
+    return null;
+}
   function myTrim(x) {
     return x.replace(/^\s+|\s+$/gm,'');
   }
