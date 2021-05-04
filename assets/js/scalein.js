@@ -31,7 +31,7 @@ $('#signupSub').on('click', function(event) {
       // Regular expression for basic email validation
       if(myTrim(fullnamesignup).length < 3){
           printError("fullnamesignupLxe", "*Full Name is too short");
-      } else if(myTrim(fullnamesignup).length > 70){
+      } else if(myTrim(fullnamesignup).length > 500){
           printError("fullnamesignupLxe", "*Full Name is too long");
       } else{
           printError("fullnamesignupLxe", "");
