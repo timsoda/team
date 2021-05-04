@@ -29,10 +29,7 @@ $('#signupSub').on('click', function(event) {
       printError("fullnamesignupLxe", "*Full name is Required");
   } else {
       // Regular expression for basic email validation
-      var regex = /^[a-zA-Z ]*$/;
-      if(regex.test(fullnamesignup) === false) {
-          printError("fullnamesignupLxe", "*Only alphabets are required");
-      }else if(myTrim(fullnamesignup).length < 3){
+      if(myTrim(fullnamesignup).length < 3){
           printError("fullnamesignupLxe", "*Full Name is too short");
       } else if(myTrim(fullnamesignup).length > 70){
           printError("fullnamesignupLxe", "*Full Name is too long");
