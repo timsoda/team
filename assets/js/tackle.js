@@ -66,7 +66,7 @@ document.getElementById("mcopy").addEventListener("click", function() {
     //copyText.select();
     //document.execCommand("copy");
     navigator.clipboard.writeText(copyText)
-    document.getElementById("mcoppied").innerHTML ="Stutus Code Coppid to Clipboard " + copyText.value;
+    document.getElementById("mcoppied").innerHTML ="Stutus Code Coppid to Clipboard " + copyText;
   setTimeout(upup, 3000);
         function upup() {
         document.getElementById("mcoppied").innerHTML = "";
